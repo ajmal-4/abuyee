@@ -62,12 +62,17 @@ $(function () {
     const btn = document.getElementById("scrollToTopBtn");
     btn.addEventListener("click", scrollToTop);
 
+    const whatsappBtn = document.getElementById('whatsappBtn');
+    whatsappBtn.addEventListener("click", scrollToTop);
+
     window.onscroll = function () {
         const btn = document.getElementById("scrollToTopBtn");
         if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
             btn.style.display = "flex";
+            whatsappBtn.style.display = "flex";
         } else {
             btn.style.display = "none";
+            whatsappBtn.style.display = "none";
         }
     };
 
